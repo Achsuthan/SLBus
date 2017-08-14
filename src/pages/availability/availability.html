@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title end>Payment</ion-title>
+    <ion-buttons start (click)="home()">
+      <button ion-button>
+        <ion-icon name="arrow-Back"></ion-icon>
+        Back to Home
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content onscroll="true">
+  <ion-card>
+
+    <ion-card-header style="color:red; font-size: 20px;">
+      Important
+    </ion-card-header>
+
+    <ion-card-content>
+      <p style="font-size:18px;"> Your temprory booking will be available <b>{{time}} </b> seconds. Before <b>{{time}}</b> seconds confirm your booking by making payament or Reservation </p>
+    </ion-card-content>
+
+  </ion-card>
+  <ion-card>
+      <ion-card-header style="font-size: 16px;">
+        Booking Information
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-icon color="subtle" large item-start  ios="ios-flag-outline" md="md-flag"></ion-icon>
+          <h2>Name </h2>
+          <p>Mahendran Achsuthan</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon color="subtle" large item-start ios="ios-flag-outline" md="md-flag"></ion-icon>
+          <h2>Contat Number </h2>
+          <p>0774455878</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon color="subtle" large item-start ios="ios-flag-outline" md="md-flag"></ion-icon>
+          <h2>Bus Name </h2>
+          <p>Bus 1</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon color="subtle" large item-start ios="ios-flag-outline" md="md-flag"></ion-icon>
+          <h2>Bus Type</h2>
+          <p>Non AC</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon color="subtle" large item-start ios="ios-flag-outline" md="md-flag"></ion-icon>
+          <h2>No Of Seats </h2>
+          <p>{{people}}</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon color="subtle" large item-start ios="ios-flag-outline" md="md-flag"></ion-icon>
+          <h2>Seat Numbers </h2>
+          <p *ngFor="let seat of seats"> {{seat}}</p>
+        </ion-item>
+      </ion-card-content>
+  </ion-card>
+  <br/><br/>
+  <div padding>
+    <button ion-button full (click)="payment()" >Make Payment</button>
+  </div>
+  <div padding>
+    <button ion-button full (click)="reservation()">Ticket Reservation</button>
+  </div>
+</ion-content>

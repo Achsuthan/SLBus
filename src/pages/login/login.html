@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content onscroll="true" >
+
+    <div style="margin-top:25% ">
+
+
+  <ion-list >
+    <br/><br/>
+    <div style="text-align: center;">
+      <img style="width:25%;height: 30%;" src="assets/img/bus.png" alt="sliit logo"/>
+    </div>
+    <br/>
+
+      <ion-item>
+        <ion-label floating>Contact Number</ion-label>
+        <ion-input type="tel" [(ngModel)]="contact" ></ion-input>
+      </ion-item>
+    <br/>
+
+    <div padding>
+      <button ion-button full (click)="login()">Login</button>
+    </div>
+  </ion-list>
+
+    </div>
+
+</ion-content>

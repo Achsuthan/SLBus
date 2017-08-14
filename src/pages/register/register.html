@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content onscroll="true">
+
+  <ion-list >
+    <ion-item>
+      <ion-label floating>Firstname</ion-label>
+      <ion-input type="text" [(ngModel)]="firstname"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Lastname</ion-label>
+      <ion-input type="text" [(ngModel)]="lastname"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label floating>Gender</ion-label>
+      <ion-label floating>&nbsp;&nbsp;</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="Male">Male</ion-option>
+        <ion-option value="Female">Female</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label floating>Nic </ion-label>
+      <ion-input type="tel" [(ngModel)]="nic"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Contact Number</ion-label>
+      <ion-input type="tel" [(ngModel)]="contact"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+
+
+
+    <div padding>
+      <button ion-button full (click)="signup()">Register</button>
+      <br/>
+      <button ion-button full color="danger" (click)="clear()">Clear</button>
+    </div>
+  </ion-list>
+
+</ion-content>

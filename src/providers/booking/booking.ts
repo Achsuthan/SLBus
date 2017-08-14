@@ -1,0 +1,25 @@
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
+/*
+  Generated class for the BookingProvider provider.
+
+  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
+  for more info on providers and Angular DI.
+*/
+@Injectable()
+export class BookingProvider {
+
+  public seats:any=[];
+
+  constructor(public http: Http) {
+    console.log('Hello BookingProvider Provider');
+  }
+
+  public setseats(seats)
+  {
+    this.seats=seats;
+  }
+
+}

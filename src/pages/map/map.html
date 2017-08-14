@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Map
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <div padding>
+    <button ion-button full (click)="navigate()">Navigate</button>
+  </div>
+
+  <br/>
+  <div #map id="map" style="height:100%;"></div>
+
+  <!--<div padding>
+    <button ion-button full (click)="login()">Login</button>
+  </div>
+-->
+</ion-content>
